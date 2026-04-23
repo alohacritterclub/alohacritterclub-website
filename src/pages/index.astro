@@ -95,4 +95,26 @@ import DonationAsk from '../components/DonationAsk.astro';
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
+
+  .video-section {
+    margin: 2rem 0 0;
+  }
+
+  .video-wrap {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(45, 129, 166, 0.15);
+  }
+
+  .video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
 </style>

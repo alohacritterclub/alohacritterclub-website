@@ -65,14 +65,21 @@ Source: `~/Downloads/Aloha Critter Club Income & Expenses Tracker 2025.xlsx` (re
 **Stack:** Astro (static site generator) + Netlify (hosting + forms) + GitHub (code + version history) + optional Decap CMS for non-terminal editing.
 
 - [x] **Phase 0 — Prerequisites** (complete 2026-04-22). Tools: Homebrew 5.1.7, node v25.9.0, npm 11.12.1, gh 2.91.0. Accounts: GitHub `alohacritterclub`, Netlify signed up via GitHub OAuth (email: `alohacritterclub@gmail.com`). Domain registrar: **Wix** (renews 2027-01-13; DNS cutover via Wix panel in Phase 4, no transfer needed). CMS layer: **Decap** (Phase 3 — GUI editing at `/admin`, auth via GitHub OAuth + Netlify Identity).
-- [~] **Phase 1 — Local build** *(in progress).* Scaffold Astro project in this folder; port Home / Who We Are / Events / Contact from Wix content; preview locally.
-- [ ] **Phase 2 — GitHub + Netlify staging.** Push to GitHub, connect Netlify, get staging URL (e.g. `alohacritterclub-xxx.netlify.app`) for review.
-- [ ] **Phase 3 — Optional CMS.** Add Decap CMS for non-terminal content edits if desired.
-- [ ] **Phase 4 — DNS cutover.** Point alohacritterclub.org to Netlify; configure redirects from old Wix URLs to preserve backlinks.
-- [ ] **Phase 5 — Shut down Wix.** Export content, cancel Wix subscription.
+- [x] **Phase 1 — Local build** (complete 2026-04-22). Astro 6.1.9 minimal template, TypeScript strict. Stack: `src/layouts/Layout.astro` + `src/components/{Header,Footer,DonationAsk}.astro` + 4 pages (`index`, `about`, `events`, `contact`). Brand applied: colors (`#2d81a6` primary, `#faba0e` accent, `#8cbf1c` green, `#64b5e3` light), fonts (Fredoka One display, Arvo body, via Google Fonts), tagline "One Paw At A Time." in hero + footer. Logo at `/images/logo.png`. Venmo QR at `/images/venmo-qr.png`. Redirects config in `netlify.toml` for `/event` → `/events` and `/who-we-are` → `/about`.
+- [x] **Phase 2 — GitHub + Netlify staging** (complete 2026-04-22). Repo: https://github.com/alohacritterclub/alohacritterclub-website (public, `main` branch, initial commit `1abe2be`). Netlify site auto-generated name `stellular-valkyrie-159d1a` (rename pending). Staging URL: https://stellular-valkyrie-159d1a.netlify.app. Auto-deploys on push to `main`. Netlify team name: "Critter Leads".
+- [ ] **Phase 3 — Decap CMS.** Add Decap CMS for non-terminal content edits. Requires GitHub OAuth app + Netlify Identity/Git Gateway.
+- [ ] **Phase 4 — DNS cutover.** Point alohacritterclub.org to Netlify via Wix DNS panel; verify redirects from old Wix URLs.
+- [ ] **Phase 5 — Shut down Wix.** Export content, cancel Wix subscription (domain stays at Wix as registrar).
 - [ ] **Phase 6 — Post-migration SEO.** Resubmit sitemap to Google Search Console, update Instagram/Facebook bios, verify indexing.
 
-Current phase: **Phase 0**.
+Current phase: **Phase 3 (Decap CMS)** — or pause here and iterate on content/styling first.
+
+**Outstanding on staging site** (can do before or after Phase 3):
+- Embed promo video on homepage (YouTube URL pending from Kristin)
+- Convert HEIC photos to JPG so they render in browsers
+- Actually use photos in pages (hero image, team photos on About, etc.)
+- Remove duplicate `logo without background copy 3.png` from `public/images/`
+- Rename Netlify site from `stellular-valkyrie-159d1a` to `alohacritterclub` or similar (Site settings → Change site name)
 
 ## What's pending
 
