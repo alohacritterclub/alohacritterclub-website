@@ -1,0 +1,106 @@
+---
+const links = [
+  { href: '/',        label: 'Home' },
+  { href: '/about',   label: 'About' },
+  { href: '/events',  label: 'Events' },
+  { href: '/contact', label: 'Contact' },
+];
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<header>
+  <div class="header-inner">
+    <a href="/" class="brand">
+      <img src="/images/logo.png" alt="Aloha Critter Club" />
+    </a>
+
+    <nav>
+      <ul>
+        {links.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class:list={['nav-link', { active: currentPath === link.href }]}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a href="https://venmo.com/u/alohacritterclub" class="btn donate-btn">
+      Donate
+    </a>
+  </div>
+</header>
+
+<style>
+  header {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .brand img {
+    max-height: 56px;
+    width: auto;
+    display: block;
+  }
+
+  nav { margin-left: auto; }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    color: var(--color-ink);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+  }
+
+  .nav-link:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-accent);
+  }
+
+  .nav-link.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
+  @media (max-width: 640px) {
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    nav { margin-left: 0; }
+    .donate-btn { align-self: stretch; text-align: center; }
+  }
+</style>

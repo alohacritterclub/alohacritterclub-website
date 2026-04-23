@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Preserve SEO from original Wix URLs
+[[redirects]]
+  from = "/event"
+  to = "/events"
+  status = 301
+
+[[redirects]]
+  from = "/event/"
+  to = "/events"
+  status = 301
+
+[[redirects]]
+  from = "/who-we-are"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/who-we-are/"
+  to = "/about"
+  status = 301

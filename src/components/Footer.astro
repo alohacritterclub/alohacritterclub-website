@@ -1,0 +1,109 @@
+---
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h3 class="footer-brand">Aloha Critter Club</h3>
+      <p class="footer-tagline">One Paw At A Time.</p>
+      <p class="footer-muted">
+        A Hawaii 501(c)(3) nonprofit building after-school clubs where
+        kids become animal experts and practice social-emotional learning.
+      </p>
+      <p class="footer-muted ein">EIN: 86-1496578</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>
+        <a href="mailto:alohacritterclub@gmail.com">alohacritterclub@gmail.com</a><br/>
+        <span class="footer-muted">P.O. Box 1281, Kea'au, HI 96749</span>
+      </p>
+      <p>
+        <a href="https://instagram.com/alohacritterclub" target="_blank" rel="noopener">
+          @alohacritterclub on Instagram
+        </a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support our work</h4>
+      <p>
+        <a href="https://venmo.com/u/alohacritterclub" class="btn">
+          Donate via Venmo
+        </a>
+      </p>
+      <p class="footer-muted small">
+        501(c)(3) tax-deductible. Automatic receipt from Venmo.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © {year} Aloha Critter Club. All rights reserved.
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--color-surface-alt);
+    border-top: 1px solid var(--color-border);
+    margin-top: 4rem;
+  }
+
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+
+  .footer-col h4 {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 0.75rem;
+  }
+
+  .footer-brand {
+    font-size: 1.25rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .footer-tagline {
+    color: var(--color-accent);
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-muted {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+
+  .footer-muted.small {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+
+  .ein {
+    font-family: ui-monospace, monospace;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .footer-bottom {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+</style>

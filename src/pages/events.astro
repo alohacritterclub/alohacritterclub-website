@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const categories = [
+  {
+    title: 'Fundraisers',
+    desc: 'Student-led giving drives — like Pennies for Pets — that raise funds for local rescues and shelters.',
+  },
+  {
+    title: 'Volunteering at the Humane Society',
+    desc: 'Hands-on service and internships at Hawaii Island Humane Society — walking dogs, socializing cats, supporting shelter staff.',
+  },
+  {
+    title: 'Community Outreach',
+    desc: 'Animal welfare education events at schools, libraries, and public spaces across Hawaii Island.',
+  },
+  {
+    title: 'Youth Conferences & Showcases',
+    desc: 'Students presenting their club work and animal welfare projects at regional youth events.',
+  },
+  {
+    title: 'Petfix Free Spay & Neuter Clinics',
+    desc: 'Volunteering at low-cost clinics — helping community pet owners and reducing pet overpopulation.',
+  },
+  {
+    title: 'Therapy Dogs at Schools',
+    desc: 'Hosting certified therapy dog visits in partner schools to support social-emotional learning.',
+  },
+  {
+    title: 'Veterinarian Presentations',
+    desc: 'Local vets visit clubs to teach students about animal health, careers, and responsible pet care.',
+  },
+  {
+    title: 'Farm Visits & Field Studies',
+    desc: 'Field trips to farms, rescues, and wildlife centers — including Magical Creatures in 2025.',
+  },
+  {
+    title: 'Partnership Outreach',
+    desc: 'Collaborations with Aloha Ilio Rescue and other Hawaii animal welfare organizations.',
+  },
+];
+---
+<Layout
+  title="Events | Aloha Critter Club — Hawaii Animal Programs"
+  description="See how Aloha Critter Club students have impacted Hawaii — fundraisers, Humane Society volunteering, spay/neuter clinics, therapy dogs, field trips, and more."
+>
+  <h1>How Students Have Impacted Hawai'i</h1>
+
+  <p class="lead">
+    Aloha Critter Club is more than an after-school club — it's a launchpad for
+    the next generation of Hawaii's animal advocates. Here's how our students
+    show up for their community.
+  </p>
+
+  <section>
+    <h2>What our kids do</h2>
+    <ul class="category-grid">
+      {categories.map(cat => (
+        <li class="category-card">
+          <h3>{cat.title}</h3>
+          <p>{cat.desc}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="media-note">
+    <h2>Photos & videos</h2>
+    <p>
+      Action shots from clubs, field trips, and community events are being
+      added to the site. In the meantime, follow
+      <a href="https://instagram.com/alohacritterclub" target="_blank" rel="noopener">
+        @alohacritterclub on Instagram
+      </a>
+      for the latest from our students.
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>Want to bring this to your school?</h2>
+    <p>
+      Teachers, school leaders, and community partners —
+      <a href="/contact">get in touch</a> to start a club at your school,
+      volunteer, or co-sponsor an event.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .category-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .category-card {
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .category-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .category-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+
+  .media-note, .cta {
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+  }
+
+  .media-note h2, .cta h2 {
+    margin-top: 0;
+  }
+</style>

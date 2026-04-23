@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DonationAsk from '../components/DonationAsk.astro';
+---
+<Layout
+  title="Aloha Critter Club | After-School Animal Clubs in Hawaii"
+  description="Hawaii 501(c)(3) nonprofit building after-school clubs where kids become animal experts, practice SEL, and take action for local animal welfare."
+>
+  <section class="hero">
+    <p class="tagline">One Paw At A Time.</p>
+    <h1>After-School Animal Clubs for Hawaii Schools</h1>
+    <p class="lead">
+      Aloha Critter Club partners with Hawaii Island schools to run after-school
+      clubs where kids become animal experts, practice social-emotional learning,
+      and take meaningful action for animals in their community.
+    </p>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <span class="stat-number">70</span>
+      <span class="stat-label">Students served</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">5</span>
+      <span class="stat-label">Partner schools</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">FY 2025</span>
+      <span class="stat-label">Most recent year</span>
+    </div>
+  </section>
+
+  <section class="about-snippet">
+    <h2>What we do</h2>
+    <p>
+      Every week, kids at partner schools across Hawaii Island gather for
+      after-school clubs centered on animal welfare: caring for critters,
+      learning about local wildlife, practicing empathy, and taking on
+      community projects for shelters and rescues.
+    </p>
+    <p>
+      Our curriculum pairs hands-on animal education with social-emotional
+      learning — building kids who can name what they feel, listen to others,
+      and follow through on what they care about.
+    </p>
+    <p>
+      <a href="/about">Meet the team →</a>
+    </p>
+  </section>
+
+  <DonationAsk />
+</Layout>
+
+<style>
+  .hero { padding: 2rem 0 1rem; }
+
+  .tagline {
+    font-style: italic;
+    color: var(--color-accent);
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+  }
+
+  .stat-label {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>

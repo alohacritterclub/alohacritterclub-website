@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Contact | Aloha Critter Club — Hawaii Nonprofit"
+  description="Contact Aloha Critter Club to bring an after-school animal welfare program to your Hawaii school, volunteer with us, or support our nonprofit."
+>
+  <h1>Get in Touch</h1>
+
+  <p class="lead">
+    We'd love to hear from you — whether you're interested in bringing a
+    club to your school, volunteering, partnering with us, or making a gift.
+  </p>
+
+  <section class="contact-methods">
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p>
+        <a href="mailto:alohacritterclub@gmail.com">alohacritterclub@gmail.com</a>
+      </p>
+      <p class="note">Kristin reads every message personally.</p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Mail</h3>
+      <p>
+        Aloha Critter Club<br/>
+        P.O. Box 1281<br/>
+        Kea'au, HI 96749
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Instagram</h3>
+      <p>
+        <a href="https://instagram.com/alohacritterclub" target="_blank" rel="noopener">
+          @alohacritterclub
+        </a>
+      </p>
+      <p class="note">Latest club photos & event announcements.</p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Donate</h3>
+      <p>
+        <a href="https://venmo.com/u/alohacritterclub">Venmo @alohacritterclub</a>
+      </p>
+      <p class="note">501(c)(3); automatic tax receipt. EIN 86-1496578.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .contact-card {
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+
+  .contact-card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .contact-card .note {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+</style>

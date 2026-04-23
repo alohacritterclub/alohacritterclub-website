@@ -1,0 +1,102 @@
+---
+const tiers = [
+  { amount: '$25',  impact: "a student's club supplies for a semester" },
+  { amount: '$75',  impact: "one student's field trip to Magical Creatures" },
+  { amount: '$250', impact: 'a full semester of supplies for an entire school' },
+  { amount: '$500', impact: 'a teacher stipend for a full club cycle' },
+];
+---
+<section class="donation-ask">
+  <div class="donation-content">
+    <h2>Fuel a Hawaii kid's love for animals.</h2>
+    <p class="lead">
+      In 2025, Aloha Critter Club served 70 students across 5 Hawaii Island
+      schools — teaching them to care for animals and each other. It costs us
+      about <strong>$86 a year</strong> to serve one student, and every dollar
+      goes into their hands.
+    </p>
+
+    <ul class="tiers">
+      {tiers.map(t => (
+        <li>
+          <span class="tier-amount">{t.amount}</span>
+          <span class="tier-impact">— {t.impact}</span>
+        </li>
+      ))}
+    </ul>
+
+    <p>
+      Scan to give via Venmo. We're a 501(c)(3); your donation is
+      tax-deductible and you'll receive an automatic receipt.
+    </p>
+  </div>
+
+  <div class="donation-qr">
+    <img src="/images/venmo-qr.png"
+         alt="Venmo QR code to donate to Aloha Critter Club (handle: @alohacritterclub)" />
+    <p class="qr-caption">@alohacritterclub</p>
+    <a href="https://venmo.com/u/alohacritterclub" class="btn">
+      Or tap to give
+    </a>
+  </div>
+</section>
+
+<style>
+  .donation-ask {
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .donation-content h2 { margin-top: 0; }
+
+  .tiers {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .tiers li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--color-border);
+  }
+
+  .tiers li:last-child { border-bottom: none; }
+
+  .tier-amount {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+  }
+
+  .donation-qr { text-align: center; }
+
+  .donation-qr img {
+    max-width: 200px;
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: white;
+    padding: 0.5rem;
+  }
+
+  .qr-caption {
+    font-family: ui-monospace, monospace;
+    color: var(--color-muted);
+    margin: 0.5rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .donation-ask {
+      grid-template-columns: 1fr;
+      padding: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const board = [
+  { name: 'Kristin Spear',  role: 'Founder & Board President', note: 'Elementary school counselor; founded the club at Keaukaha Elementary.' },
+  { name: 'Aakash Shah',    role: 'Secretary',                 note: '' },
+  { name: 'Nicholle Hug',   role: 'Treasurer',                 note: '' },
+  { name: 'Sarah Ortega',   role: 'Board Member',              note: '' },
+  { name: 'Leah Gowron',    role: 'Board Member',              note: '' },
+];
+
+const schools = [
+  'Pahoa Elementary',
+  "Kea'au Elementary",
+  "Kea'au High School",
+  'Mountain View Elementary',
+  'Kua O Ka La Charter School',
+];
+---
+<Layout
+  title="About Us | Aloha Critter Club Hawaii Nonprofit"
+  description="Meet the educators and board behind Aloha Critter Club — a Hawaii nonprofit pairing after-school animal welfare with social-emotional learning."
+>
+  <h1>Meet the Team Building Hawaii's After-School Animal Clubs</h1>
+
+  <p class="lead">
+    Aloha Critter Club started at Keaukaha Elementary when students asked their
+    school counselor for a club about animals. Years later, we're a
+    501(c)(3) nonprofit serving kids across five Hawaii Island schools.
+  </p>
+
+  <h2>Our mission</h2>
+  <p>
+    To run after-school clubs where Hawaii kids become animal experts who take
+    meaningful action in their community — building empathy, responsibility,
+    and social-emotional skills alongside animal welfare knowledge.
+  </p>
+
+  <h2>Board of Directors</h2>
+  <ul class="board">
+    {board.map(member => (
+      <li>
+        <strong>{member.name}</strong>
+        <span class="role">{member.role}</span>
+        {member.note && <p class="note">{member.note}</p>}
+      </li>
+    ))}
+  </ul>
+
+  <p>
+    Our board includes a secondary school principal, an elementary school
+    counselor, a social-emotional learning resource teacher, and a speech
+    pathologist — all self-described animal enthusiasts.
+  </p>
+
+  <h2>Partner schools</h2>
+  <ul class="schools">
+    {schools.map(school => <li>{school}</li>)}
+  </ul>
+</Layout>
+
+<style>
+  .board {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .board li {
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+  }
+
+  .role {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+  }
+
+  .note {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    color: var(--color-muted);
+  }
+
+  .schools {
+    columns: 2;
+    column-gap: 2rem;
+    padding-left: 1.25rem;
+  }
+
+  @media (max-width: 640px) {
+    .schools { columns: 1; }
+  }
+</style>
