@@ -9,7 +9,7 @@ Working folder for improvements to alohacritterclub.org — the site for Aloha C
 - **EIN:** 86-1496578 (effective date of exemption: January 13, 2021; source: IRS Letter 947 dated 2021-05-08)
 - **Mailing address:** P.O. Box 1281, Kea'au, HI 96749
 - **Fiscal year:** calendar year (accounting period ending Dec 31); Form 990/990-EZ/990-N filing required annually
-- **Site:** https://www.alohacritterclub.org (currently hosted on Wix; migrating to Netlify — see migration plan below)
+- **Site:** https://alohacritterclub.org — hosted on Netlify as of 2026-04-22 (DNS cutover complete). GitHub repo: https://github.com/alohacritterclub/alohacritterclub-website. Domain registrar remains Wix (renews 2027-01-13).
 - **Mission:** After-school clubs where kids become animal experts and practice social-emotional learning (SEL)
 - **Reach:** ~70 students in FY2025 across 5 schools: Pahoa Elementary, Kea'au Elementary, Kea'au High School, Mountain View Elementary, Kua O Ka La Charter School *(prior figure of ~84 students / 97% attendance was an earlier snapshot — verify which to use in public-facing copy)*
 - **Founder / Board President:** Kristin Spear
@@ -67,15 +67,15 @@ Source: `~/Downloads/Aloha Critter Club Income & Expenses Tracker 2025.xlsx` (re
 - [x] **Phase 0 — Prerequisites** (complete 2026-04-22). Tools: Homebrew 5.1.7, node v25.9.0, npm 11.12.1, gh 2.91.0. Accounts: GitHub `alohacritterclub`, Netlify signed up via GitHub OAuth (email: `alohacritterclub@gmail.com`). Domain registrar: **Wix** (renews 2027-01-13; DNS cutover via Wix panel in Phase 4, no transfer needed). CMS layer: **Decap** (Phase 3 — GUI editing at `/admin`, auth via GitHub OAuth + Netlify Identity).
 - [x] **Phase 1 — Local build** (complete 2026-04-22). Astro 6.1.9 minimal template, TypeScript strict. Stack: `src/layouts/Layout.astro` + `src/components/{Header,Footer,DonationAsk}.astro` + 4 pages (`index`, `about`, `events`, `contact`). Brand applied: colors (`#2d81a6` primary, `#faba0e` accent, `#8cbf1c` green, `#64b5e3` light), fonts (Fredoka One display, Arvo body, via Google Fonts), tagline "One Paw At A Time." in hero + footer. Logo at `/images/logo.png`. Venmo QR at `/images/venmo-qr.png`. Redirects config in `netlify.toml` for `/event` → `/events` and `/who-we-are` → `/about`.
 - [x] **Phase 2 — GitHub + Netlify staging** (complete 2026-04-22). Repo: https://github.com/alohacritterclub/alohacritterclub-website (public, `main` branch, initial commit `1abe2be`). Netlify site auto-generated name `stellular-valkyrie-159d1a` (rename pending). Staging URL: https://stellular-valkyrie-159d1a.netlify.app. Auto-deploys on push to `main`. Netlify team name: "Critter Leads".
-- [ ] **Phase 3 — Decap CMS.** Add Decap CMS for non-terminal content edits. Requires GitHub OAuth app + Netlify Identity/Git Gateway.
-- [ ] **Phase 4 — DNS cutover.** Point alohacritterclub.org to Netlify via Wix DNS panel; verify redirects from old Wix URLs.
-- [ ] **Phase 5 — Shut down Wix.** Export content, cancel Wix subscription (domain stays at Wix as registrar).
-- [ ] **Phase 6 — Post-migration SEO.** Resubmit sitemap to Google Search Console, update Instagram/Facebook bios, verify indexing.
+- [deferred 2026-04-22] **Phase 3 — Decap CMS.** Attempted with Netlify Identity + Git Gateway; Identity invite flow failed (feature in maintenance mode for new accounts — known issue). Admin scaffolding removed. Decision: defer CMS; Kristin messages for edits at current low volume. Revisit with Sveltia CMS + GitHub OAuth App if edit frequency grows past ~1/month.
+- [x] **Phase 4 — DNS cutover** (complete 2026-04-22). Wix DNS updated: apex A record → `75.2.60.5`, `www` CNAME → `stellular-valkyrie-159d1a.netlify.app`. DNS propagated globally within ~1hr. SSL auto-issued by Netlify/Let's Encrypt. https://alohacritterclub.org now serves the Astro build. Redirects verified working: `/event` → `/events`, `/who-we-are` → `/about`.
+- [ ] **Phase 5 — Shut down Wix.** Cancel Wix hosting subscription (keep domain registration at Wix). Optional content export for archive.
+- [ ] **Phase 6 — Post-migration SEO.** Resubmit sitemap (`https://alohacritterclub.org/sitemap.xml`) to Google Search Console, update Instagram/Facebook bios to new URL, verify indexing after 1–3 weeks.
 
-Current phase: **Phase 3 (Decap CMS)** — or pause here and iterate on content/styling first.
+Current phase: **Phase 5 / 6** — site is live; remaining work is wind-down of Wix + SEO relaunch.
 
-**Outstanding on staging site** (can do before or after Phase 3):
-- Embed promo video on homepage (YouTube URL pending from Kristin)
+**Outstanding on live site** (polish, do anytime):
+- YouTube promo video embedded on homepage ✓ (https://youtu.be/wOpa8_ZsdJk)
 - Convert HEIC photos to JPG so they render in browsers
 - Actually use photos in pages (hero image, team photos on About, etc.)
 - Remove duplicate `logo without background copy 3.png` from `public/images/`
