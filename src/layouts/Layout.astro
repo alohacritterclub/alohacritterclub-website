@@ -36,15 +36,22 @@ const { title, description } = Astro.props;
     <Footer />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script is:inline>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
+      window.addEventListener('load', function () {
+        if (!window.netlifyIdentity) return;
+
+        window.netlifyIdentity.on('init', function (user) {
           if (!user) {
-            window.netlifyIdentity.on('login', () => {
+            window.netlifyIdentity.on('login', function () {
               document.location.href = '/admin/';
             });
           }
         });
-      }
+
+        var hash = window.location.hash.substring(1);
+        if (/invite_token=|recovery_token=|confirmation_token=/.test(hash)) {
+          window.netlifyIdentity.open();
+        }
+      });
     </script>
   </body>
 </html>
