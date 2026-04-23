@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+# Site-wide settings
+site_url: https://stellular-valkyrie-159d1a.netlify.app
+display_url: https://stellular-valkyrie-159d1a.netlify.app
+logo_url: /images/logo.png
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Homepage
+        file: src/content/home.json
+        format: json
+        editor:
+          preview: false
+        fields:
+          - { name: tagline, label: Tagline (above headline), widget: string }
+          - { name: headline, label: Main Headline (H1), widget: string }
+          - {
+              name: subhead,
+              label: Subhead paragraph (under headline),
+              widget: text,
+            }
+          - name: stats
+            label: Stats row (3 items)
+            widget: list
+            min: 3
+            max: 3
+            fields:
+              - { name: number, label: Big number, widget: string }
+              - { name: label, label: Label under number, widget: string }
+          - {
+              name: what_we_do_heading,
+              label: '"What we do" heading',
+              widget: string,
+            }
+          - {
+              name: what_we_do_p1,
+              label: '"What we do" paragraph 1',
+              widget: text,
+            }
+          - {
+              name: what_we_do_p2,
+              label: '"What we do" paragraph 2',
+              widget: text,
+            }
