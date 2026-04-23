@@ -31,7 +31,7 @@ For the Astro/Netlify rebuild: this block lives above the Venmo QR on the homepa
 
 **QR image alt text:**
 
-> Venmo QR code to donate to Aloha Critter Club (handle: @alohacritterclub)
+> Venmo QR code to donate to Aloha Critter Club (handle: @alohacritterclub3)
 
 ---
 
@@ -61,7 +61,7 @@ const tiers = [
   <p>Scan to give via Venmo. We're a 501(c)(3); your donation is
      tax-deductible and you'll receive an automatic receipt.</p>
   <img src="/images/venmo-qr.png"
-       alt="Venmo QR code to donate to Aloha Critter Club (handle: @alohacritterclub)" />
+       alt="Venmo QR code to donate to Aloha Critter Club (handle: @alohacritterclub3)" />
 </section>
 ```
 
@@ -75,7 +75,7 @@ Still pending copy decision. Candidates (short — header buttons should be 1–
 - **Give via Venmo** (sets expectation about payment method)
 - **Support Our Kids** (mission-forward)
 
-Recommendation: **Donate** for the button label, linking to `https://venmo.com/u/alohacritterclub` (or the Venmo Charity Profile URL). When clicked on mobile this deep-links to the Venmo app; on desktop it opens the web profile. This solves the "no desktop-clickable donate" gap from the original problem statement.
+Recommendation: **Donate** for the button label, linking to `https://venmo.com/u/alohacritterclub3` (or the Venmo Charity Profile URL). When clicked on mobile this deep-links to the Venmo app; on desktop it opens the web profile. This solves the "no desktop-clickable donate" gap from the original problem statement.
 
 ---
 

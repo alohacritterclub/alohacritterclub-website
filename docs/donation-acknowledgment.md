@@ -33,7 +33,7 @@ Please keep this email for your tax records:
   Donor:                     [Donor Name]
   Donation amount:           $[Amount]
   Donation date:             [Date]
-  Payment method:            Venmo (@alohacritterclub)
+  Payment method:            Venmo (@alohacritterclub3)
 
 No goods or services were provided in exchange for this contribution.
 Your donation is tax-deductible to the extent allowed by U.S. law.

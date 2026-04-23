@@ -15,7 +15,7 @@ Working folder for improvements to alohacritterclub.org — the site for Aloha C
 - **Founder / Board President:** Kristin Spear
 - **Other board:** Aakash Shah (Secretary), Nicholle Hug (Treasurer), Sarah Ortega, Leah Gowron
 - **Contact:** alohacritterclub@gmail.com, Instagram @alohacritterclub
-- **Donation mechanism today:** Venmo **Charity Profile** QR on homepage, handle `@alohacritterclub` — tax receipts issued automatically
+- **Donation mechanism today:** Venmo **Charity Profile** QR on homepage, handle `@alohacritterclub3` — tax receipts issued automatically
 
 ## Why this project exists
 
@@ -109,7 +109,7 @@ Current phase: **Phase 3 (Decap CMS)** — or pause here and iterate on content/
 **Donations**
 - [x] Confirmed 2026-04-22: Venmo QR is a Charity Profile → tax receipts automatic, no migration needed
 - [x] Homepage framed-ask copy chosen: **Option A (tiered, with $86/yr cost-to-serve anchor)** — saved to `homepage-copy.md`, includes Astro component sketch for the Netlify rebuild
-- [x] Donor thank-you / tax-acknowledgment email template finalized — saved to `donation-acknowledgment.md`. IRS-compliant, EIN 86-1496578 baked in, Venmo handle `@alohacritterclub` confirmed. Decision: use Gmail templates for manual send rather than automate (volume too low to justify Zapier).
+- [x] Donor thank-you / tax-acknowledgment email template finalized — saved to `donation-acknowledgment.md`. IRS-compliant, EIN 86-1496578 baked in, Venmo handle `@alohacritterclub3` confirmed. Decision: use Gmail templates for manual send rather than automate (volume too low to justify Zapier).
 - [ ] Paste Option A copy into Wix homepage (Home → section above Venmo QR → Add Section Above → paste → H2 headline, bulleted tiers)
 - [ ] Add a desktop-clickable Donate button in the header
 - [ ] Finalize donor acknowledgment template with EIN and save as Gmail template (Gmail → Settings → Advanced → Templates)
