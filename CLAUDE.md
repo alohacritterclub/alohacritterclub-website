@@ -70,7 +70,7 @@ Source: `~/Downloads/Aloha Critter Club Income & Expenses Tracker 2025.xlsx` (re
 - [deferred 2026-04-22] **Phase 3 — Decap CMS.** Attempted with Netlify Identity + Git Gateway; Identity invite flow failed (feature in maintenance mode for new accounts — known issue). Admin scaffolding removed. Decision: defer CMS; Kristin messages for edits at current low volume. Revisit with Sveltia CMS + GitHub OAuth App if edit frequency grows past ~1/month.
 - [x] **Phase 4 — DNS cutover** (complete 2026-04-22). Wix DNS updated: apex A record → `75.2.60.5`, `www` CNAME → `stellular-valkyrie-159d1a.netlify.app`. DNS propagated globally within ~1hr. SSL auto-issued by Netlify/Let's Encrypt. https://alohacritterclub.org now serves the Astro build. Redirects verified working: `/event` → `/events`, `/who-we-are` → `/about`.
 - [ ] **Phase 5 — Shut down Wix.** Cancel Wix hosting subscription (keep domain registration at Wix). Optional content export for archive.
-- [ ] **Phase 6 — Post-migration SEO.** Resubmit sitemap (`https://alohacritterclub.org/sitemap.xml`) to Google Search Console, update Instagram/Facebook bios to new URL, verify indexing after 1–3 weeks.
+- [ ] **Phase 6 — Post-migration SEO.** Resubmit sitemap (`https://alohacritterclub.org/sitemap-index.xml`) to Google Search Console, update Instagram/Facebook bios to new URL, verify indexing after 1–3 weeks.
 
 Current phase: **Phase 5 / 6** — site is live; remaining work is wind-down of Wix + SEO relaunch.
 
