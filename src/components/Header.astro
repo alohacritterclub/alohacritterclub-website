@@ -28,6 +28,15 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       </ul>
     </nav>
 
+    <a
+      href="https://apps.apple.com/us/app/aloha-critter-club/id6767104283"
+      class="btn btn-outline app-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Get the App
+    </a>
+
     <a href="https://venmo.com/u/alohacritterclub3" class="btn donate-btn">
       Donate
     </a>
@@ -101,6 +110,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       gap: 0.75rem;
     }
     nav { margin-left: 0; }
+    .app-btn { align-self: stretch; text-align: center; }
     .donate-btn { align-self: stretch; text-align: center; }
   }
 </style>

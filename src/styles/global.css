@@ -93,6 +93,18 @@ a:hover { color: var(--color-accent-dark); }
   transform: translateY(-1px);
 }
 
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: calc(0.65rem - 2px) calc(1.3rem - 2px);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
 .lead {
   font-size: 1.2rem;
   color: var(--color-ink);
